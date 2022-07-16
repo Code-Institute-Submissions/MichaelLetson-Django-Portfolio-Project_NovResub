@@ -1,1 +1,1 @@
-web: gunicorn the-gym-app.wsgi
+web: gunicorn PT_Project_ML.wsgi
