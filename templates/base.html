@@ -24,7 +24,7 @@
 
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><span class="brand"><span
                         class="thin">THE PT APP</span></span></span></a>
@@ -35,11 +35,11 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link active text-color" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
+                        <a class="nav-link text-color href="#">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
@@ -50,12 +50,11 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    adventures of a software developer
-                </span>
             </div>
         </div>
     </nav>
+
+    <hr>
 
     <main class="flex-shrink-0 main-bg">
         {% block content %}
@@ -63,10 +62,11 @@
         {% endblock content %}
     </main>
 
+    
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Michael Letson</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
+        <p class="m-0 text-center text-color">Made by Michael Letson</p>
+        <p class="m-0 text-center text-color">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
             <i class="fab fa-youtube-square ms-3"></i></p>

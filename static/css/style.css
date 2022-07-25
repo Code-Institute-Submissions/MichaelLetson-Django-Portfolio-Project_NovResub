@@ -2,11 +2,23 @@ body {
     background-color: #6E6E6E;
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: #BCFD4C;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+   color: #BCFD4C;
+}
+
+hr {
+    color: white;
+}
+
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: whitesmoke;
+    color: #BCFD4C;
 }
 
 .thin {
@@ -14,7 +26,7 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #6E6E6E;
 }
 
 .dark-bg {
@@ -22,7 +34,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #6E6E6E;
 }
 
 .card {
@@ -84,12 +96,12 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #6E6E6E;
+    color: #BCFD4C;
 }
 
 .post-link:hover,
 .page-link {
-    color: #BCFD4C;
+    color: whitesmoke;
 }
 
 .post-name {
@@ -135,4 +147,8 @@ body {
     color: #BCFD4C;
     background: transparent;
     border: none;
+}
+
+.text-color {
+    color: #BCFD4C;
 }
