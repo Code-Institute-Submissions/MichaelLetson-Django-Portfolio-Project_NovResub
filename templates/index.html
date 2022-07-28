@@ -7,11 +7,11 @@
 
         <!-- Post Entries Column -->
         <div class="col-12 mt-3 left">
-            <div class="row background-lightgrey">
+            <div class="row">
             {% for post in post_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <div class="card-body">
+                        <div class="card-body background-lightgrey">
                             {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
                                     src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">

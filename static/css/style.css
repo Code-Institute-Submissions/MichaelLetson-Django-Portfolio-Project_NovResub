@@ -50,6 +50,10 @@ hr {
     background-color: transparent;
 }
 
+.card-body {
+    border-radius: 15px;
+}
+
 .image-container {
     position: relative;
 }
@@ -159,4 +163,12 @@ hr {
 
 .text-color {
     color: #BCFD4C;
+}
+
+.text-secondary {
+    color: whitesmoke!important;
+}
+
+span {
+    color: whitesmoke;
 }
