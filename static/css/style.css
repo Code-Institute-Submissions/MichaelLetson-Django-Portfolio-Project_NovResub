@@ -2,6 +2,14 @@ body {
     background-color: #6E6E6E;
 }
 
+.background-lightgrey {
+    background-color: lightgrey;
+}
+
+.nav-link {
+    font-size: x-large;
+}
+
 .navbar-light .navbar-nav .nav-link {
     color: #BCFD4C;
 }
@@ -96,7 +104,7 @@ hr {
 
 .post-link {
     text-decoration: none;
-    color: #BCFD4C;
+    color: black;
 }
 
 .post-link:hover,
