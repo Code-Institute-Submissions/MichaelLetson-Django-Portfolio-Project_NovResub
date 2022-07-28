@@ -18,10 +18,15 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
+                                {% if user.is_authenticated %}
                                 <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                     <h2 class="card-name">{{ post.name }}</h2>
-                                    <p class="card-text">{{ post.excerpt }}</p>
+                                    <p class="card-text">{{ post.price }} | {{ post.location }}</p>
                                 </a>
+                                {% else %}
+                                <h2 class="card-name">{{ post.name }}</h2>
+                                <p class="card-text"> <em>You must be a member to view more information, please register/sign in</em></p>
+                                {% endif %}
                         </div>
                     </div>
                 </div>
