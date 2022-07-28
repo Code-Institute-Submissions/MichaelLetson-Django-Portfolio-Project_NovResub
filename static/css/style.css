@@ -169,6 +169,14 @@ hr {
     color: whitesmoke!important;
 }
 
-span {
-    color: whitesmoke;
+.button {
+    background-color: #BCFD4C;
+    font-size: 20px;
+    padding: 14px 20px;
+    border-radius: 8px;
+    
+}
+
+.button:hover {
+    border: #fff;
 }
