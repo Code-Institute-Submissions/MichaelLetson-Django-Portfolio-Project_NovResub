@@ -42,9 +42,11 @@
     {% if user.is_authenticated %}
     <div class='container col-2'>
         <div class="row vertical-center-row">
-            <button class="button">
-                <p><i class="bi-plus-square"></i> Add new PT</p>
-            </button>
+            <a href=" {% url 'new_post' %} ">
+                <button class="button">
+                    <p><i class="bi-plus-square"></i> Add new PT</p>
+                </button>
+            </a>
         </div>
     </div>
     {% endif %}

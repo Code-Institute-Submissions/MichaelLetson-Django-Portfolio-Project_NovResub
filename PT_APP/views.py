@@ -1,13 +1,14 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post
+from .forms import NewPostForm
 
 
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.order_by('-created_on')
     template_name = 'index.html'
-    paginate_by = 5
+    paginate_by = 6
 
 
 class PostDetail(View):
@@ -22,3 +23,18 @@ class PostDetail(View):
                 "post": post,
             },
         )
+
+def new_post(request):
+    if request.method == 'GET':
+        return render(request, "new_post.html")
+
+    if request.method == 'POST':
+        form = NewPostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("index.html")
+    form = NewPostForm()
+    context = {
+        'form': form
+    }
+    return render(request, "new_post.html", context)
