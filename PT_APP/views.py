@@ -24,7 +24,12 @@ class PostDetail(View):
             },
         )
 
-
 def NewPost(request):
-    form = NewPostForm
+    if request.method == "POST":
+        form = NewPostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'index.html',)
+    else:
+        form = NewPostForm
     return render(request, "new_post.html", {'form':form},)
