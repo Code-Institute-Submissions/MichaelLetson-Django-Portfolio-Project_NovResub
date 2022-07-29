@@ -24,7 +24,11 @@
                                     <p class="card-text">{{ post.price }} | {{ post.location }}</p>
                                 </a>
                                 {% else %}
-                                <h2 class="card-name">{{ post.name }}</h2>
+                                <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                                    <h2 class="card-name">{{ post.name }}</h2>
+                                    <p class="card-text">{{ post.price }} | {{ post.location }}</p>
+                                </a>
+                                <br>
                                 <p class="card-text"> <em>You must be a member to edit/delete, please register/sign in</em></p>
                                 {% endif %}
                         </div>
