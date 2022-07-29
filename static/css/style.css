@@ -1,5 +1,6 @@
 body {
     background-color: #6E6E6E;
+    color: whitesmoke;
 }
 
 .background-lightgrey {
@@ -169,14 +170,10 @@ hr {
     color: whitesmoke!important;
 }
 
-.button {
-    background-color: #BCFD4C;
-    font-size: 20px;
-    padding: 14px 20px;
-    border-radius: 8px;
-    
+.btn {
+    padding: 0.375rem 2rem;
 }
 
-.button:hover {
-    border: #fff;
+.btn-success {
+    background-color: #BCFD4C;
 }

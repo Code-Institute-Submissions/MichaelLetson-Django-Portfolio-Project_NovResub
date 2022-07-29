@@ -2,14 +2,15 @@
 {% load crispy_forms_tags %}
 
 
-<center>
-    <form action='' method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-    </form>
-</center>  
-
-
+<div col-12>
+    <div class="d-flex justify-content-center">
+        <form action='' method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</div>
+    
 
 {% endblock content %}
