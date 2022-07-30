@@ -2,9 +2,20 @@
 
 {% block content %}
 
+{% if messages %}
+    {% for message in messages %}
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8 mt-3 offset-md-2 alert alert-success" role="alert">
+            {{ message }}
+          </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endif %}
+
 <div class="container-fluid">
     <div class="row">
-
         <!-- Post Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -23,6 +34,7 @@
                                     <h2 class="card-name">{{ post.name }}</h2>
                                     <p class="card-text">{{ post.price }} | {{ post.location }}</p>
                                 </a>
+                                <a href="{% url 'delete' post.id %}">Delete</a>
                                 {% else %}
                                 <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                     <h2 class="card-name">{{ post.name }}</h2>

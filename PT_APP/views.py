@@ -1,7 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
+from django.shortcuts import redirect
+# from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import NewPostForm
+from django.contrib import messages
+
 
 
 class PostList(generic.ListView):
@@ -9,6 +13,14 @@ class PostList(generic.ListView):
     queryset = Post.objects.order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
+
+
+def delete_post(request, post_id=None):
+    Model = Post
+    post_to_delete = Model.objects.get(id=post_id)
+    post_to_delete.delete()
+    messages.success(request, ('Item successfully deleted!'))
+    return redirect('home')
 
 
 class PostDetail(View):
