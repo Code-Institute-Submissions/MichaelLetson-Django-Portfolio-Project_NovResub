@@ -22,7 +22,7 @@
             {% for post in post_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <div class="card-body background-lightgrey">
+                        <div class="card-body background-lightgreen">
                             {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
                                     src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
@@ -36,7 +36,7 @@
                                 </a>
                                 <br>
                                 <button type="button" class="btn btn-delete"><a href="{% url 'delete' post.id %}">Delete</a></button>
-                                <button type="button" class="btn btn-edit"><a href="#">Edit</a></button>
+                                <button type="button" class="btn btn-edit"><a href="{% url 'edit' %}">Edit</a></button>
                                 {% else %}
                                 <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                     <h2 class="card-name">{{ post.name }}</h2>

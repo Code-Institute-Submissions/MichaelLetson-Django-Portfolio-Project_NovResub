@@ -46,3 +46,7 @@ def NewPost(request):
     else:
         form = NewPostForm
     return render(request, "new_post.html", {"form": form,},)
+
+def EditPost(request):
+    return render(request, "edit_post.html")
+    

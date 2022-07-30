@@ -3,8 +3,8 @@ body {
     color: whitesmoke;
 }
 
-.background-lightgrey {
-    background-color: lightgrey;
+.background-lightgreen {
+    background-color: #bcfd4c6e;
 }
 
 .nav-link {
@@ -130,7 +130,7 @@ a:hover {
 
 .post-link:hover,
 .page-link {
-    color: whitesmoke;
+    color: black;
 }
 
 .post-name {
