@@ -41,7 +41,8 @@ def NewPost(request):
         form = NewPostForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'index.html',)
+            messages.success(request, ('Successfully added! Return to home page to view it.'))
+            return render(request, "new_post.html", {"form": form,},)
     else:
         form = NewPostForm
-    return render(request, "new_post.html", {'form':form},)
+    return render(request, "new_post.html", {"form": form,},)
