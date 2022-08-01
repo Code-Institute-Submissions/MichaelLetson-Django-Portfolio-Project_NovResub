@@ -4,7 +4,7 @@ body {
 }
 
 .background-lightgreen {
-    background-color: #bcfd4c6e;
+    background-color: silver;
 }
 
 .nav-link {
@@ -52,7 +52,7 @@ hr {
 }
 
 .card-body {
-    border-radius: 15px;
+    border-radius: 5px;
     color:black;
 }
 
@@ -143,17 +143,6 @@ a:hover {
     color: whitesmoke;
 }
 
-.btn-signup {
-    background-color: #BCFD4C;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #BCFD4C;
-}
-
 .link {
     color: #BCFD4C;
     text-decoration: none;
@@ -171,6 +160,19 @@ a:hover {
 
 .text-secondary {
     color: whitesmoke!important;
+}
+
+/* ---------------------------------buttons */
+
+.btn-signup {
+    background-color: #BCFD4C;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #BCFD4C;
 }
 
 .btn-success {
