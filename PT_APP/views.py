@@ -47,6 +47,18 @@ def NewPost(request):
         form = NewPostForm
     return render(request, "new_post.html", {"form": form,},)
 
-def EditPost(request):
-    return render(request, "edit_post.html")
+def EditPost(request, post_slug):
+    post = Post.objects.get(slug=post_slug)
+    form = NewPostForm(instance=post)
+
+    if request.method == "POST":
+        form = NewPostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, ('Successfully updated! Return to home page to view it.'))
+            return render(request, "new_post.html", {"form": form,},)
+
+    context = {'form': form}
+    return render(request, 'new_post.html', context)
+
     
