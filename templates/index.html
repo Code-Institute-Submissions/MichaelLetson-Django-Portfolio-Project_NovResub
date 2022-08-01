@@ -14,6 +14,18 @@
     {% endfor %}
 {% endif %}
 
+{% if user.is_authenticated %}
+    <div class='container'>
+        <div class="d-flex justify-content-center">
+            <a href=" {% url 'new_post' %} ">
+                <button class="btn btn-outline-primary">
+                    <p><i class="bi bi-person-plus"></i>  Add New</p>
+                </button>
+            </a>
+        </div>
+    </div>
+{% endif %}
+
 <div class="container-fluid">
     <div class="row">
         <!-- Post Entries Column -->
@@ -69,18 +81,6 @@
             {% endif %}
         </ul>
     </nav>
-    {% endif %}
-
-    {% if user.is_authenticated %}
-    <div class='container'>
-        <div class="d-flex justify-content-center">
-            <a href=" {% url 'new_post' %} ">
-                <button class="btn btn-outline-primary">
-                    <p><i class="bi bi-person-plus"></i>  Add New</p>
-                </button>
-            </a>
-        </div>
-    </div>
     {% endif %}
 
 </div>

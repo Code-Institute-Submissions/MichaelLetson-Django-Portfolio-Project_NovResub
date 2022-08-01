@@ -1,11 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
-from django.shortcuts import redirect
-# from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import NewPostForm
 from django.contrib import messages
-
 
 
 class PostList(generic.ListView):
@@ -36,6 +33,7 @@ class PostDetail(View):
             },
         )
 
+
 def new_post(request):
     if request.method == "POST":
         form = NewPostForm(request.POST)
@@ -47,6 +45,7 @@ def new_post(request):
         form = NewPostForm
     return render(request, "new_post.html", {"form": form, },)
 
+
 def edit_post(request, post_slug):
     post = Post.objects.get(slug=post_slug)
     form = NewPostForm(instance=post)
@@ -55,10 +54,9 @@ def edit_post(request, post_slug):
         form = NewPostForm(request.POST, instance=post)
         if form.is_valid():
             form.save()
-            messages.success(request, ('Successfully updated! Return to home page to view it.'))
+            messages.success(request, ('Successfully updated! Return to home page to view it.')) # noqa
             return render(request, "new_post.html", {"form": form, },)
 
     context = {'form': form}
     return render(request, 'new_post.html', context)
 
-    
