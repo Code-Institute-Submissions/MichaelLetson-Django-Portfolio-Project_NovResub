@@ -36,18 +36,18 @@ class PostDetail(View):
             },
         )
 
-def NewPost(request):
+def new_post(request):
     if request.method == "POST":
         form = NewPostForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, ('Successfully added! Return to home page to view it.'))
-            return render(request, "new_post.html", {"form": form,},)
+            messages.success(request, ('Successfully added! Return to home page to view it.')) # noqa
+            return render(request, "new_post.html", {"form": form, },)
     else:
         form = NewPostForm
-    return render(request, "new_post.html", {"form": form,},)
+    return render(request, "new_post.html", {"form": form, },)
 
-def EditPost(request, post_slug):
+def edit_post(request, post_slug):
     post = Post.objects.get(slug=post_slug)
     form = NewPostForm(instance=post)
 
@@ -56,7 +56,7 @@ def EditPost(request, post_slug):
         if form.is_valid():
             form.save()
             messages.success(request, ('Successfully updated! Return to home page to view it.'))
-            return render(request, "new_post.html", {"form": form,},)
+            return render(request, "new_post.html", {"form": form, },)
 
     context = {'form': form}
     return render(request, 'new_post.html', context)
