@@ -42,6 +42,7 @@
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
                                 {% if user.is_authenticated %}
+                                <div class="card-padding"> 
                                     <a href="{% url 'post_detail' post.slug %}" class="post-link" style="width: 50%;">
                                         <h2 class="card-name">{{ post.name }}</h2>
                                         <p class="card-text">{{ post.price }} per hour | {{ post.location }}</p>
@@ -49,13 +50,16 @@
                                     <br>
                                     <button type="button" class="btn btn-delete"><a href="{% url 'delete' post.id %}">Delete</a></button>
                                     <button type="button" class="btn btn-edit"><a href="{% url 'edit' post.slug %}">Edit</a></button>
+                                </div>
                                 {% else %}
-                                <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                    <h2 class="card-name">{{ post.name }}</h2>
-                                    <p class="card-text">{{ post.price }} per hour | {{ post.location }}</p>
-                                </a>
-                                <br>
-                                <p class="card-text"> <em>You must be a member to edit/delete, please register/sign in</em></p>
+                                <div class="card-padding">
+                                    <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                                        <h2 class="card-name">{{ post.name }}</h2>
+                                        <p class="card-text">£{{ post.price }} per hour | {{ post.location }}</p>
+                                    </a>
+                                    <br>
+                                    <p class="card-text" style="font-size: medium;"> <em>You must be a member to edit/delete, please register/sign in.</em></p>
+                                </div>
                                 {% endif %}
                         </div>
                     </div>

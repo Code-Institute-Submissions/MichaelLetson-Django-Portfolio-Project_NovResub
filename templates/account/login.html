@@ -16,24 +16,15 @@
       so please sign in, or if you're new here please 
       <a href="{{ signup_url }}" style="color:#BCFD4C;">sign up</a>{% endblocktrans %}</p>
 
-      <form class="login" method="POST" action="/accounts/login/">
+      <form class="login" method="POST" action="/accounts/login/">{% csrf_token %}
         {% csrf_token %}
-        <input type="hidden" name="csrfmiddlewaretoken" value="zRLcciVVXMgTSYzmtdOkdux8jmJ7l1JVx6rGMoI5gnz13toIUGPToK0BzDmDvYQU">
+        <input type="hidden" name="csrfmiddlewaretoken" value="zRLcciVVXMgTSYzmtdOkdux8jmJ7l1JVx6rGMoI5gnz13toIUGPToK0BzDmDvYQU">{% csrf_token %}
         <p><label for="id_login">Username:</label> <input class='form-control' type="text" name="login" placeholder="Username" autocomplete="username" maxlength="150" required id="id_login"></p>
         <p><label for="id_password">Password:</label> <input class='form-control' type="password" name="password" placeholder="Password" autocomplete="current-password" required id="id_password"></p>
         <p><label for="id_remember">Remember Me:</label> <input type="checkbox" name="remember" id="id_remember"></p>
         
         <button class="primaryAction" type="submit">Sign In</button>
             </form>
-
-      <!-- <form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-      </form> -->
     </div>
   </div>
 </div>
