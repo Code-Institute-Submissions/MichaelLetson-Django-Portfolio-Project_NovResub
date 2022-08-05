@@ -19,6 +19,6 @@ class NewPostForm(forms.ModelForm):
             'featured_image':forms.ClearableFileInput(attrs={'class':'form-control', 'type':'file', 'id':'formFile'}),
             'location':forms.TextInput(attrs={'class':'form-control', 'placeholder':'Location'}),
             'price':forms.NumberInput(attrs={'class':'form-control', 'placeholder':'Session price per hour'}),
-            'content':forms.TextInput(attrs={'class':'form-control', 'placeholder':'Tell us about you...'}),
+            'content':forms.Textarea(attrs={'class':'form-control', 'placeholder':'Tell us about you...'}),
         }
 
