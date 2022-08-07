@@ -9,7 +9,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Post(models.Model):
     name = models.CharField(max_length=200, unique=True)
     slug = AutoSlugField(populate_from='name', editable=True, always_update=True) # noqa
-    featured_image = models.ImageField(upload_to='images/', blank=True, default='placeholder') # noqa
+    featured_image = CloudinaryField('image', default='placeholder') # noqa
     location = models.CharField(max_length=200, blank=True)
     price = models.DecimalField(
         decimal_places=2,
