@@ -42,9 +42,19 @@ Throughout this development I was manually testing the functionality, UI/UX, use
 
 ### PEP8
 
+Did PEP8 checks on key files and had to edit spacing in settings.py, forms.py, models.py and urls.py to make all pass okay. These are the key files I checked via http://pep8online.com/. 
+
 ### HTML Validator
 
+![image](https://user-images.githubusercontent.com/93741957/183312352-40f975f7-f7ac-4a4d-b2de-9b9aad999e7a.png)
+
+Only two issues found, both were rectified and code added and committed. Checked via https://validator.w3.org/ 
+
 ### CSS Validator
+
+![image](https://user-images.githubusercontent.com/93741957/183312418-1eccb024-b34a-40c2-a407-c7490df18a2e.png)
+
+No issues found in validator check for CSS, checked via https://jigsaw.w3.org/css-validator/ 
 
 ### Lighthouse
 
@@ -66,10 +76,10 @@ This project was deployed via Heroku.
 
 I created a respository and opened in gitpod to create my code. To move my code from gitpod to repository ready for deployment I followed these steps (which I did often to show a journey of creating my site):
 
--git add .
--git commit -m "message"
--git push
--git pull --rebase
+- git add .
+- git commit -m "message"
+- git push
+- git pull --rebase
 
 ## Tools
 
