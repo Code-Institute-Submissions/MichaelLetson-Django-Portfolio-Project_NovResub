@@ -27,6 +27,13 @@ The performance result is very poor, but after using code institute template, an
 
 ## Using Git 
 
+I created a respository and opened in gitpod to create my code. To move my code from gitpod to repository ready for deployment I followed these steps (which I did often to show a journey of creating my site):
+
+-git add .
+-git commit -m "message"
+-git push
+-git pull --rebase
+
 ## Tools
 ### To Do
 ### Flowchart 
