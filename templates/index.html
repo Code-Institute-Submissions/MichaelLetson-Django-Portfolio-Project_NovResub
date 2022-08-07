@@ -45,7 +45,7 @@
                                 <div class="card-padding"> 
                                     <a href="{% url 'post_detail' post.slug %}" class="post-link" style="width: 50%;">
                                         <h2 class="card-name">{{ post.name }}</h2>
-                                        <p class="card-text">{{ post.price }} per hour | {{ post.location }}</p>
+                                        <p class="card-text">£{{ post.price }} per hour | {{ post.location }}</p>
                                     </a>
                                     <br>
                                     <button type="button" class="btn btn-delete"><a href="{% url 'delete' post.id %}">Delete</a></button>
