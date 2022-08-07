@@ -1,5 +1,7 @@
 # The PT App 
 
+![image](https://user-images.githubusercontent.com/93741957/183312827-df3ec622-d16a-4b32-87db-7d734da47504.png)
+
 ## Purpose & Features
 The purpose of this site is to help Personal Trainers become more accessible, to help PTs promote themselves and gain clientel with more ease than resources that are currently available. This site helps answer the question, where do I find a new Personal Trainer without searching social mdeia platforms and not through word of mouth? And gives new, more junior PTs a great platform to expose themselves to potential clients - whilst also adding benefit to more experienced PTs to further grow their client pool.
 
