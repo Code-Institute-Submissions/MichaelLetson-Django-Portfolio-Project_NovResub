@@ -4,11 +4,24 @@
 The purpose of this site is to help Personal Trainers become more accessible, to help PTs promote themselves and gain clientel with more ease than resources that are currently available. This site helps answer the question, where do I find a new Personal Trainer without searching social mdeia platforms and not through word of mouth? And gives new, more junior PTs a great platform to expose themselves to potential clients - whilst also adding benefit to more experienced PTs to further grow their client pool.
 
 ### Colour Theme
+
+![image](https://user-images.githubusercontent.com/93741957/183293877-0c8a89e6-146d-46b9-bc06-6a279ad770d6.png)
+
+I took this colour scheme from https://designshack.net/articles/trends/best-website-color-schemes/ - I found it worked well and added a good look to a sporty webpage. 
+
 ### What is the app?
+
+This app is to provide visibility of PTs to people who are in search of a PT. 
+
 ### Why? 
+Sounds like a simple website, but currently, unless you know someone or are willing to approach people in the gym or to search social media apps, it's difficult to find a Personal Trainer. This website makes the solution simple, "check the PT App".
+
 ### Who is the target audience? 
+Either PTs wanting to sell themselves to gain clients, or people looking for a PT.
 
 ## Struggles
+
+Some key struggles I came across were the forms in this page. What I had initially planned to do was beyond the scope of what had been taught in this projects resources. Unbenounced to the complexities of uploading images that would display on the site, having forms that could be displayed with prefilled detail that could be edited and the planning of the infrastructure behind this - I managed to overcome this through my own research, thankfully. The issue of uploading an image, and storing images in cloudinary that could be displayed, this issue was very difficult to overcome and was not directly disucssed in related walkthrough videos I had been working from, I did not have enough time to self-teach the process of doing this, so decided to remove the functionality to upload your own photo, and used a code institute provided link for an image which will be used in the site. This image is non-related to the context of the site, which is why I am highlighting the reason for using that image here. 
 
 ## Expansion & Improvements
 
