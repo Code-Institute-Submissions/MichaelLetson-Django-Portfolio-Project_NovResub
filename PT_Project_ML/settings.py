@@ -30,6 +30,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['the-gym-app.herokuapp.com', 'localhost']
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-michaellets-djangoportf-albut7skiuw.ws-eu73.gitpod.io',
+    'https://the-gym-app.herokuapp.com',
+    'https://localhost'
+    ]
+
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
