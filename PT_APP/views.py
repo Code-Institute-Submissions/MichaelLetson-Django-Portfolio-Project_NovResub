@@ -16,7 +16,10 @@ class PostList(generic.ListView):
 @login_required
 def delete_post(request, post_id=None):
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(
+            request,
+            'Sorry, only store owners can do that. Contact us for help!'
+            )
         return redirect(('home'))
 
     Model = Post
@@ -61,7 +64,10 @@ def edit_post(request, post_slug):
     form = NewPostForm(instance=post)
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(
+            request,
+            'Sorry, only store owners can do that. Contact us for help!'
+            )
         return redirect(('home'))
 
     if request.method == "POST":
