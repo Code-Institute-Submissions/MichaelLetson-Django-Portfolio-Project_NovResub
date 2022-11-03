@@ -85,10 +85,14 @@ I created a respository and opened in gitpod to create my code. To move my code 
 
 ## Tools
 
-### To Do
+### To Do/User Stories
 ![image](https://user-images.githubusercontent.com/93741957/183296206-eeda935a-3581-4fb5-82a1-048d571d0bea.png)
 
 I used To Do to try and follow somewhat of a Kanban approach to completing this project, I have unticked each for visibility within README.
+
+Upon further development of the project, I used proper User Stories inside Git: 
+
+![image](https://user-images.githubusercontent.com/93741957/199726460-76bdb725-9e08-403a-aa70-3c3a42f372cf.png)
 
 ### Flowchart 
 ![image](https://user-images.githubusercontent.com/93741957/183296269-33b7064a-9153-4302-b4c2-3444e8e62f41.png)
