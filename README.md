@@ -102,3 +102,14 @@ This is the flowchart I had created for the flow when landing on the website, si
 ### Resources 
 
 For resources not mentioned above, I used Slack, Google, YouTube, Code Institute walkthrough videos and tutoring as well as relate tech stack documentation. All to help with developing and debugging across the site. 
+
+### Errors 
+
+After deployment, this project was failed - the following errors were found and rectified: 
+
+- A non authenticated user, could access CRUD functionality by URL, added security was implemented to the views to stop this. 
+- 403 Error on login/register page, this was due to a csrf token issue which was due to a random input fieild in the form which was generating the same token number which Django was not accepting (needs a refreshed one each time). 
+- There was a HTML syntax error in the base.html, which then cascaded to each page from here. Error was a trailing tag, it was removed. 
+- There was poor documentation of Agile methods used, I did follow a good structured plan. But, to ensure criteria was met, I implemented and added into README the Projects section to Git which demonstrates clear Agile processes. 
+
+
